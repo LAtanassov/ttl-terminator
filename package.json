@@ -1,0 +1,14 @@
+{
+    "name": "ttl-terminator",
+    "description": "TTL Terminator (AWS Lambda Function) is called periodically and deletes CFN Stacks without or with expired TTL tag",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {},
+    "devDependencies": {
+        "aws-sdk": "^2.677.0",
+        "jest": "^24.7.1"
+    },
+    "scripts": {
+        "test": "jest"
+    }
+}

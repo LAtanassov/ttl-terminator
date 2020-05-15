@@ -1,0 +1,27 @@
+# This is the SAM template that represents the architecture of your serverless application
+# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-basics.html
+
+# The AWSTemplateFormatVersion identifies the capabilities of the template
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/format-version-structure.html
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  ttl-terminator
+
+Transform:
+- AWS::Serverless-2016-10-31
+
+Resources:  
+
+  TTLTerminator:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: TTL Terminator is called periodically and deletes CFN Stacks without or with expired TTL tag
+      Runtime: nodejs10.x
+      Handler: src/handlers/ttl-terminator.handler
+      Events:
+        CloudWatchEvent:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 0 0 * ? *)
+      MemorySize: 128
+      Timeout: 100
