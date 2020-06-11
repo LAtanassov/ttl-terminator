@@ -5,6 +5,7 @@ TTL Terminator (AWS Lambda Function) is called periodically and deletes CFN Stac
 **AGAIN: TTL TERMINATOR DELETES CFN STACKS WITHOUT OR WITH EXPIRED TTL TAG**
 
 [![Build Status](https://travis-ci.org/LAtanassov/ttl-terminator.svg?branch=master)](https://travis-ci.org/LAtanassov/ttl-terminator)
+[![codecov](https://codecov.io/gh/LAtanassov/ttl-terminator/branch/master/graph/badge.svg)](https://codecov.io/gh/LAtanassov/ttl-terminator)
 
 ## Run locally
 
